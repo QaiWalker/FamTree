@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">FamTree</string>
+    <string name="parent">Add Main Family Branch</string>
+    <string name="name">Full Name of Family Member</string>
+    <string name="nameEnter">Enter name here</string>
+    <string name="title">How do you address your family member?</string>
+    <string name="titleEnter">Enter the title here</string>
+    <string name="address">What is their home address?</string>
+    <string name="addressEnter">Enter their address here</string>
+    <string name="number">What is their contact number?</string>
+    <string name="numberEnter">Enter their number here</string>
+    <string name="displayPic">Add a display picture</string>
+    <string name="editTitle">Title:</string>
+    <string name="editName">Full Name:</string>
+    <string name="editAddress">Address:</string>
+    <string name="editNumber">Number:</string>
+    <string name="relation">How are they related?</string>
+    <string name="etRelation">Enter Relationship here</string>
+    <string name="editRelation">Relation:</string>
+    <string name="sendingTo">Sending message to:</string>
+    <string name="etSendingTo">Enter message</string>
+    <string name="title_activity_maps">Map</string>
+</resources>
