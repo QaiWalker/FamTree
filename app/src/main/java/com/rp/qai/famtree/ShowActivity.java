@@ -20,13 +20,8 @@ public class ShowActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_show);
         member = new ArrayList<Member>();
-        DBHelper dbh = new DBHelper(ShowActivity.this);
-
-        member = dbh.getAllMembers();
-        aa = new MemberAdapter(this, R.layout.row, member);
-        dbh.close();
-
         lv = findViewById(R.id.mainBranchList);
+        aa = new MemberAdapter(this, R.layout.row, member);
         lv.setAdapter(aa);
         lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -36,8 +31,22 @@ public class ShowActivity extends AppCompatActivity {
                         ModifyActivity.class);
                 Member data = member.get(position);
                 i.putExtra("data", data);
-                startActivity(i);
+                startActivityForResult(i, 9);
             }
         });
+        DBHelper dbh = new DBHelper(ShowActivity.this);
+        member.clear();
+        member.addAll(dbh.getAllMembers());
+        dbh.close();
+        aa.notifyDataSetChanged();
+    }
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode,
+                                    Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        if (resultCode == RESULT_OK && requestCode == 9){
+            lv.performClick();
+        }
     }
 }
