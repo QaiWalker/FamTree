@@ -9,6 +9,8 @@ import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -17,13 +19,16 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.ArrayList;
+
 public class ModifyActivity extends AppCompatActivity {
 
     TextView tvEditName, tvEditTitle, tvEditAddress, tvEditNumber, tvEditRelation;
     EditText etEditName, etEditTitle, etEditAddress, etEditNumber, etEditRelation;
-    Button btnUpdate, btnDelete, btnCancel, btnEditImage;
-    ImageView editDisplayPic, ivCall, ivLocation, ivMessage;
+    Button btnUpdate, btnDelete, btnCancel;
+    ImageView ivCall, ivLocation, ivMessage;
     Member data;
+    ArrayList<Member> member;
     MemberAdapter aa;
     private static final int REQUEST_CALL = 1;
 
@@ -36,11 +41,13 @@ public class ModifyActivity extends AppCompatActivity {
         etEditAddress = findViewById(R.id.etEditAddress);
         etEditNumber = findViewById(R.id.etEditNumber);
         etEditRelation = findViewById(R.id.etEditRelation);
+
+
         btnUpdate = findViewById(R.id.btnUpdate);
         btnDelete = findViewById(R.id.btnDelete);
         btnCancel = findViewById(R.id.btnCancel);
-        editDisplayPic = findViewById(R.id.editDisplayPic);
-        btnEditImage = findViewById(R.id.btnEditImage);
+
+
         ivCall = findViewById(R.id.ivCall);
         ivLocation = findViewById(R.id.ivLocation);
         ivMessage = findViewById(R.id.ivMessage);
@@ -64,7 +71,7 @@ public class ModifyActivity extends AppCompatActivity {
                 data.setAddress(etEditAddress.getText().toString());
                 data.setNumber(Integer.parseInt(etEditNumber.getText().toString()));
                 int data1 = dbh.updateMember(data);
-                Toast.makeText(ModifyActivity.this, data1+" " +data.getId(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(ModifyActivity.this, "Update Successful", Toast.LENGTH_SHORT).show();
                 dbh.close();
                 setResult(RESULT_OK);
                 finish();
@@ -81,6 +88,17 @@ public class ModifyActivity extends AppCompatActivity {
                 setResult(RESULT_OK);
                 finish();
 
+            }
+        });
+
+        ivLocation.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(ModifyActivity.this,
+                        MapsActivity.class);
+                i.putExtra("data", data);
+                startActivityForResult(i, 9);
+                startActivity(i);
             }
         });
 
@@ -129,5 +147,23 @@ public class ModifyActivity extends AppCompatActivity {
                 Toast.makeText(ModifyActivity.this, "Permission DENIED", Toast.LENGTH_SHORT).show();
             }
         }
+    }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.menu, menu);
+        return true;
+    }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+        if (id == R.id.show) {
+            Intent intent = new Intent(ModifyActivity.this, ShowActivity.class);
+            startActivity(intent);
+        } else if (id == R.id.add){
+            Intent intent = new Intent(ModifyActivity.this, MainActivity.class);
+            startActivity(intent);
+        }
+        return super.onOptionsItemSelected(item);
     }
 }

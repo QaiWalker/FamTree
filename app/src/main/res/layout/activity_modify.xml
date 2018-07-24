@@ -72,18 +72,6 @@
         android:ems="10"
         android:inputType="textPersonName" />
 
-    <ImageView
-        android:id="@+id/editDisplayPic"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:srcCompat="@mipmap/ic_launcher" />
-
-    <Button
-        android:id="@+id/btnEditImage"
-        android:layout_width="match_parent"
-        android:layout_height="38dp"
-        android:text="Set Image" />
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
