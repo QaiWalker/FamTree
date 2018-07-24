@@ -73,8 +73,9 @@ public class DBHelper extends SQLiteOpenHelper {
                 String title = cursor.getString(3);
                 String address = cursor.getString(4);
                 int number = cursor.getInt(5);
-                Member member = new Member(name, relation, title, address, number);
+                Member member = new Member(id, name, relation, title, address, number);
                 members.add(member);
+                Log.d("Data", member.toString());
             } while (cursor.moveToNext());
         }
         cursor.close();

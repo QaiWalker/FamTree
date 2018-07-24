@@ -9,14 +9,34 @@ public class Member implements Serializable {
     private String title;
     private String address;
     private int number;
+    private String image;
 
+    @Override
+    public String toString() {
+        return "Member{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", relation='" + relation + '\'' +
+                ", title='" + title + '\'' +
+                ", address='" + address + '\'' +
+                ", number=" + number +
+                ", image='" + image + '\'' +
+                '}';
+    }
 
-    public Member(String name, String relation, String title, String address, int number) {
+    public Member(int id, String name, String relation, String title, String address, int number) {
+        this.id = id;
         this.name = name;
         this.relation = relation;
         this.title = title;
         this.address = address;
         this.number = number;
+
+
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getRelation() {

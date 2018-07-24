@@ -63,7 +63,8 @@ public class ModifyActivity extends AppCompatActivity {
                 data.setTitle(etEditTitle.getText().toString());
                 data.setAddress(etEditAddress.getText().toString());
                 data.setNumber(Integer.parseInt(etEditNumber.getText().toString()));
-                dbh.updateMember(data);
+                int data1 = dbh.updateMember(data);
+                Toast.makeText(ModifyActivity.this, data1+" " +data.getId(), Toast.LENGTH_SHORT).show();
                 dbh.close();
                 setResult(RESULT_OK);
                 finish();

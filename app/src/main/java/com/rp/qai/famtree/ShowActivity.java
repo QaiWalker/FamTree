@@ -46,7 +46,13 @@ public class ShowActivity extends AppCompatActivity {
         super.onActivityResult(requestCode, resultCode, data);
 
         if (resultCode == RESULT_OK && requestCode == 9){
-            lv.performClick();
+            DBHelper dbh = new DBHelper(ShowActivity.this);
+            member.clear();
+            member.addAll(dbh.getAllMembers());
+            dbh.close();
+            aa.notifyDataSetChanged();
+
         }
+
     }
 }

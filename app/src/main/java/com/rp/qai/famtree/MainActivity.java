@@ -50,6 +50,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        displayPic = findViewById(R.id.displayPic);
         etName = findViewById(R.id.etName);
         etTitle = findViewById(R.id.etTitle);
         etAddress = findViewById(R.id.etAddress);
