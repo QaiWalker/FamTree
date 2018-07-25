@@ -23,7 +23,10 @@ import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.UiSettings;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.Marker;
+import com.google.android.gms.maps.model.MarkerOptions;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -122,6 +125,13 @@ public class MapsActivity extends AppCompatActivity {
 
                 LatLng current = new LatLng(Double.parseDouble(lat), Double.parseDouble(lng));
                 map.moveCamera(CameraUpdateFactory.newLatLngZoom(current, 17));
+
+                Marker markEast = map.addMarker(new
+                        MarkerOptions()
+                        .position(current)
+                        .title(data.getName() + "'s Address")
+                        .snippet(data.getAddress())
+                        .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED)));
 
                 if(dialog.isShowing())
                     dialog.dismiss();
