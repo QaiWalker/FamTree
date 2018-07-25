@@ -11,7 +11,9 @@
         android:id="@+id/tvName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/name" />
+        android:text="@string/name"
+        android:textSize="20dp"
+        android:textColor="#40e0d0"/>
 
     <EditText
         android:id="@+id/etName"
@@ -19,13 +21,16 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="@string/nameEnter"
-        android:inputType="textPersonName" />
+        android:inputType="textPersonName"
+        android:textColor="#40e0d0"/>
 
     <TextView
         android:id="@+id/tvRelation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/relation" />
+        android:text="@string/relation"
+        android:textSize="20dp"
+        android:textColor="#40e0d0"/>
 
     <EditText
         android:id="@+id/etRelation"
@@ -39,7 +44,9 @@
         android:id="@+id/tvTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/title" />
+        android:text="@string/title"
+        android:textSize="20dp"
+        android:textColor="#40e0d0"/>
 
     <EditText
         android:id="@+id/etTitle"
@@ -53,7 +60,9 @@
         android:id="@+id/tvAddress"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="What is their address?" />
+        android:text="What is their address?"
+        android:textSize="20dp"
+        android:textColor="#40e0d0"/>
 
     <EditText
         android:id="@+id/etAddress"
@@ -67,7 +76,9 @@
         android:id="@+id/tvNumber"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/number" />
+        android:text="@string/number"
+        android:textSize="20dp"
+        android:textColor="#40e0d0"/>
 
     <EditText
         android:id="@+id/etNumber"
@@ -87,14 +98,18 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Insert" />
+            android:text="Insert"
+            android:backgroundTint="#40e0d0"
+            android:textColor="#FFFFFF"/>
 
         <Button
             android:id="@+id/btnShow"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Show List" />
+            android:text="Show List"
+            android:backgroundTint="#40e0d0"
+            android:textColor="#FFFFFF"/>
     </LinearLayout>
 
 </LinearLayout>

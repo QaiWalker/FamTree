@@ -25,7 +25,9 @@
             android:id="@+id/btnGetCoord"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Get" />
+            android:text="Get"
+            android:backgroundTint="#40e0d0"
+            android:textColor="#FFFFFF"/>
     </LinearLayout>
 
     <fragment

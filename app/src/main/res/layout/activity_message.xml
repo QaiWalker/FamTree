@@ -12,7 +12,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/sendingTo"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#40e0d0"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -51,7 +52,9 @@
             android:id="@+id/btnSending"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Send" />
+            android:text="Send"
+            android:backgroundTint="#40e0d0"
+            android:textColor="#FFFFFF"/>
     </LinearLayout>
 
 </LinearLayout>

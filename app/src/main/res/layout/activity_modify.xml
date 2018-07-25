@@ -11,7 +11,11 @@
         android:id="@+id/tvEditName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/editName" />
+        android:text="@string/editName"
+        android:textSize="20sp"
+        android:textColor="#40e0d0"
+        android:fontFamily="sans-serif-thin"
+        android:textStyle="bold"/>
 
     <EditText
         android:id="@+id/etEditName"
@@ -24,7 +28,11 @@
         android:id="@+id/tvEditRelation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/editRelation" />
+        android:text="@string/editRelation"
+        android:textSize="20sp"
+        android:textColor="#40e0d0"
+        android:fontFamily="sans-serif-thin"
+        android:textStyle="bold"/>
 
     <EditText
         android:id="@+id/etEditRelation"
@@ -37,7 +45,11 @@
         android:id="@+id/tvEditTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/editTitle" />
+        android:text="@string/editTitle"
+        android:textSize="20sp"
+        android:textColor="#40e0d0"
+        android:fontFamily="sans-serif-thin"
+        android:textStyle="bold"/>
 
     <EditText
         android:id="@+id/etEditTitle"
@@ -50,7 +62,11 @@
         android:id="@+id/tvEditAddress"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/editAddress" />
+        android:text="@string/editAddress"
+        android:textSize="20sp"
+        android:textColor="#40e0d0"
+        android:fontFamily="sans-serif-thin"
+        android:textStyle="bold"/>
 
     <EditText
         android:id="@+id/etEditAddress"
@@ -63,7 +79,11 @@
         android:id="@+id/tvEditNumber"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/editNumber" />
+        android:text="@string/editNumber"
+        android:textSize="20sp"
+        android:textColor="#40e0d0"
+        android:fontFamily="sans-serif-thin"
+        android:textStyle="bold"/>
 
     <EditText
         android:id="@+id/etEditNumber"
@@ -82,21 +102,27 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Update" />
+            android:text="Update"
+            android:backgroundTint="#40e0d0"
+            android:textColor="#FFFFFF"/>
 
         <Button
             android:id="@+id/btnDelete"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Delete" />
+            android:text="Delete"
+            android:backgroundTint="#40e0d0"
+            android:textColor="#FFFFFF"/>
 
         <Button
             android:id="@+id/btnCancel"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Cancel" />
+            android:text="Cancel"
+            android:backgroundTint="#40e0d0"
+            android:textColor="#FFFFFF"/>
 
     </LinearLayout>
 
@@ -108,24 +134,24 @@
 
         <ImageView
             android:id="@+id/ivCall"
-            android:layout_width="wrap_content"
+            android:layout_width="38dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            app:srcCompat="@android:drawable/ic_menu_call" />
+            app:srcCompat="@drawable/phone" />
 
         <ImageView
             android:id="@+id/ivLocation"
-            android:layout_width="wrap_content"
+            android:layout_width="23dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            app:srcCompat="@android:drawable/ic_menu_mylocation" />
+            app:srcCompat="@drawable/gps" />
 
         <ImageView
             android:id="@+id/ivMessage"
-            android:layout_width="wrap_content"
+            android:layout_width="29dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            app:srcCompat="@android:drawable/sym_action_email" />
+            app:srcCompat="@drawable/msg" />
     </LinearLayout>
 
 </LinearLayout>
